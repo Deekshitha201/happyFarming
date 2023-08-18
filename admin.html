@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+        <title>Finest Products,Finest Results</title>
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                    <div class="text-center">
+                                        <img src="https://th.bing.com/th/id/OIP.GruiVKE5_yZClz1OybJlbgHaHa?pid=ImgDet&w=207&h=207&c=7&dpr=1.3"
+                                            style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1"><i>ADMIN LOGIN</i></h4>
+                                    </div>
+
+                                    <form action="adminmain.html" onsubmit="return verifypassword()" >
+                                        <p>Please login to your account</p>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="form2Example11" class="form-control"
+                                                placeholder="Phone number or email address" />
+                                            <label class="form-label" for="form2Example11">Username</label>
+                                            
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="password" class="form-control" />
+                                            <label class="form-label" for="form2Example22">Password</label>
+                                            <p class="message" id="message"></p>
+                                        </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 " type="submit" placeholder="Sign In"></input>
+                                            <a class="text-muted" href="#!">Forgot password?</a>
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Don't have an account?</p>
+                                            <button type="button" class="btn btn-outline-danger">Create new</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <h4 class="mb-4">'Marketing is a race without a finishing line'.
+                                        <hr width="30px">
+                                    </h4>
+                                    <p class="small mb-0">An administrator is a critical employee who undertakes
+                                        administrative duties within businesses, organisations and institutions of every
+                                        size.Administrators are versatile workers who organise, adapt and problem-solve in a busy office environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function verifypassword() {
+          var pw = document.getElementById("password").value;
+          //check empty password field  
+          if (pw.length = 0) {
+            document.getElementById("message").innerHTML = "**Fill the password please!";
+            return false;
+          }
+    
+          //minimum password length validation  
+          if (pw.length < 8) {
+            document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+            return false;
+          }
+    
+          //maximum length of password validation  
+          if (pw.length > 15) {
+            document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+            return false;
+          } else {
+            alert("Password is correct");
+          }
+        }
+    
+      </script>
+</body>
+
+</html>

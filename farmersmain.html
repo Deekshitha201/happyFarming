@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finest Products,Finest Results</title>
+    <link rel="shortcut icon" href="logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap");
+      :root {
+        --orange: #ff7800;
+        --black: #130f40;
+        --light-color: #666;
+        --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        --border: 2rem solid rgba(0, 0, 0, 0.1);
+        --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+        --outline-hover: 0.2rem solid var(--black);
+      }
+      .container {
+            position: absolute;
+          text-align: center; 
+          color: white;
+         opacity: 0.2;
+        }
+      html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 7rem;
+      }
+      body {
+        background: #eee;
+      }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 9%;
+        background: #fff;
+        box-shadow: var(--box-shadow);
+      }
+      .header .logo {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: var(--black);
+      }
+      .header .logo i {
+        color: var(--orange);
+      }
+      .header .navbar a {
+        font-size: 1.5rem;
+        margin: 0.1rem;
+        color: var(--black);
+        padding-left: 40px;
+      }
+      .header .navbar a:hover {
+        color: var(--orange);
+      }
+      .dropbtn {
+        padding: 16px;
+        background-color: white;
+        font-size: 1.5rem;
+        margin: 0.1rem;
+        color: var(--black);
+        border: none;
+        cursor: pointer;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 0.1rem;
+        color: var(--black);
+        padding-left: 25px;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        padding: 0px 16px;
+        background-color: white;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 10px 10px;
+        font-size: 1.5rem;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: all 0.2s linear;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      #table1{
+          margin-top: 200px;
+          border: 2px solid black;
+      }
+      #table3{
+          margin-left: 27%;
+          border: 2px solid black;
+      }
+      </style>
+</head>
+<body>
+  <div class="container">
+      <img src="https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg?auto=compress&cs=tinysrgb&w=600"width="1525px"height="510px">    
+  </div>
+  <header class="header">
+      <a href="#" class="logo"
+        ><i class="fa-solid fa-wheat-awn"></i>Happy Farming</a
+      >
+      <nav class="navbar">
+        <a href="#complainpage" onclick="fun2()">Complain Page</a>
+        <a href="#View Complain" onclick="fun()">View Complain</a>
+        <a href="#cropadvert" onclick="fun1()">Crop Details</a>
+        <a href="index.html">LogOut</a>
+      </nav>
+    </header> 
+    <table id="table1" border="2" width="100%" style="visibility: hidden;">
+      <thead>
+        <th>Complaint ID</th>
+        <th>Complaint Type</th>
+        <th>Status</th>
+        <th>Farmer Id</th>
+      </thead>
+      <tr style="text-align: center;">
+        <td><p id="1">1</p></td>
+        <td><p id="1">Crop Issue</p></td>
+        <td><p>Read</p></td>
+        <td><p>101</p></td>
+      </tr>
+      <tr style="text-align: center;">
+        <td><p id="1">2</p></td>
+        <td><p id="1">Fertilizer Problems</p></td>
+        <td><p>Pending</p></td>
+        <td><p>121</p></td>
+      </tr>
+    </table>
+    <table id="table2" border="2" width="100%" style="visibility: hidden;">
+      <thead>
+        <th>Crop Id</th>
+        <th>Crop Name</th>
+        <th>Image</th>
+        <th>Quantity</th>
+        <th>Supplier Id</th>
+        <th>Supplier Contact</th>
+        <th>Status</th>
+      </thead>
+      <tr style="text-align: center;font-size: 20px;">
+        <td><p id="1">14</p></td>
+        <td><p id="1">Tomato</p></td>
+        <td><img src="Tomato_je.jpg" width="100px" height="100px"></td>
+        <td><p>5</p></td>
+        <td><p>103</p></td>
+        <td><p>437234567</p></td>
+        <td><p>Accepted</p></td>
+      </tr>
+      <tr style="text-align: center;">
+        <td><p id="1">20</p></td>
+        <td><p id="1">Potato</p></td>
+        <td><img src="potatoes.jpg" width="100px" height="100px"></td>
+        <td><p>3</p></td>
+        <td><p>105</p></td>
+        <td><p>1234567890</p></td>
+        <td><p>Pending</p></td>
+      </tr>
+    </table>
+    <form id="table3"  border="2"  width="50%" style="visibility: hidden;">
+      <h3 style="padding-left: 140px;">Complain Page</h3>
+    <table width="40%" >
+          <tr style="text-align: center;font-size: 20px;">
+            <td><label for="name">Complaint Id:</label></td>
+            <td><input type="number"  id="name" /></td>
+          </tr>
+          <tr style="text-align: center;font-size: 20px;">
+            <td><label for="email">Farmer Id:</label></td>
+            <td><input type="number" /></td>
+          </tr>
+          <tr style="text-align: center;font-size: 20px;">
+            <td><label for="Password">Complain:</label></td>
+            <td><input type="text"   /></td>
+          </tr>
+          <tr style="text-align: center;font-size: 20px;">
+            <td><button>Submit</button></td>
+          </tr>
+    </table>
+  </form>
+    <script>
+      function fun(){
+        table2.style.visibility='hidden'
+        table1.style.visibility="visible"
+        table3.style.visibility='hidden'
+      }
+      function fun1(){
+          table2.style.visibility='visible'
+          table1.style.visibility='hidden'
+          table3.style.visibility='hidden'
+      }
+      function fun2(){
+        table1.style.visibility='hidden'
+        table2.style.visibility='hidden'
+        table3.style.visibility='visible'
+      }
+    </script>
+</body>
+</html>
+</head>
+<body>
+  
+</body>
+</html>
